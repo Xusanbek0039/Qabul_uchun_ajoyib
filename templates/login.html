@@ -1,0 +1,204 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>IT Creative | Hisobga kirish</title>
+
+        <!-- CSS FILES -->                
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static '/css/bootstrap-icons.css'  %}" rel="stylesheet">
+
+        <link href="{% static '/css/tooplate-kool-form-pack.css' %}" rel="stylesheet">
+
+
+<!-- Qabulga yozilish va yuqro menu buyruqlari -->
+
+    </head>
+    
+    <body>
+
+        <main>
+
+            <header class="site-header">
+                <div class="container">
+                    <div class="row justify-content-between">
+
+                        <div class="col-lg-12 col-12 d-flex align-items-center">
+                            <a class="site-header-text d-flex justify-content-center align-items-center me-auto" href="{% url 'index' %}">
+                                <i class="bi-box"></i>
+
+                                <span>
+                                    IT Creative Group
+                                </span>
+                            </a>
+
+                            <ul class="social-icon d-flex justify-content-center align-items-center mx-auto">
+                                <a class="text-white me-4 d-none d-lg-block" href = "https://t.me/MBin_Dev_0071"> Biz bilan bo'glanish!</a> 
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.instagram.com/it_creative_channel/" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.twitter.com/it_creative0071/" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://whatsapp.com/+998954446686" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+
+                            <div>
+                                <a href="#" class="custom-btn custom-border-btn btn" data-bs-toggle="modal" data-bs-target="#subscribeModal">Qabulga yozilish
+                                    <i class="bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+
+                            <a class="bi-list offcanvas-icon" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu"></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+<!-- Ong tomon menu buyruqlari -->
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">                
+                <div class="offcanvas-header">                    
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="{% url 'login' %}">Hisobga kirish</a>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'register' %}">Hisob yaratish</a>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'password-reset' %}">Parolni tiklash</a>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'soat' %}">Joriy soat</a>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'contact' %}">Biz haqimizda</a>
+                            </li>
+                            <li>
+                                <a href="{% url '404' %}">404 Xatolik</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+                       <!-- Modal -->
+            <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="#" method="get" class="custom-form mt-lg-4 mt-2" role="form">
+                                <h2 class="modal-title" id="subscribeModalLabel">Davom etish uchun gmail manzilingizni kiriting:</h2>
+
+                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Gmail manzilingiz" required="">
+
+                                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfowtOs_1HcxR3CBNrLqi_AgdN9uT_2ldVSO4tqv7m6W-YCNg/viewform?usp=sharing"><button type="button" class="btn custom-btn custom-border-btn">Davom etish</button></a>
+
+
+                            </form>
+                        </div>
+
+                        <div class="modal-footer justify-content-center">
+                            <p>Iltimos qurilmanzidagi gmail manzilni kiriting!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="hero-section d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-12 mx-auto">
+                            <form class="custom-form login-form" role="form" method="post">
+                                <h2 class="hero-title text-center mb-4 pb-2">Hisobga kirish</h2>
+
+                                <div class="form-floating mb-4 p-0">
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+
+                                    <label for="email">Gmail manzil</label>
+                                </div>
+
+                                <div class="form-floating p-0">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+
+                                    <label for="password">Parol</label>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                  
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Meni eslaysizmi
+                                    </label>
+                                </div>
+
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-lg-5 col-12">
+                                        <button type="submit" class="form-control">Kirish</button>
+                                    </div>
+
+                                    <div class="col-lg-5 col-12">
+                                        <a href="{% url 'register' %}" class="btn custom-btn custom-border-btn">Yaratish</a>
+                                    </div>
+                                </div>
+
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrap">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                        <source src="{% static '/videos/video.mp4' %}" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+        </main>
+
+        <!-- Javascript fayllar  -->
+        <script src="{% static '/js/jquery.min.js' %}"></script>
+        <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/js/countdown.js' %}"></script>
+        <script src="{% static '/js/init.js' %}"></script>
+
+
+    </body>
+</html>
