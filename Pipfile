@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-crispy-forms = "*"
+pillow = "*"
+django-ckeditor = "*"
+environ = "*"
+dj-database-url = "*"
+dj-email-url = "*"
+environs = "*"
+psycopg2 = "*"
+django-js-asset = "*"
+tzdata = "*"
+sqlparse = "*"
+pytz = "*"
+typing-extensions = "*"
+asgiref = "*"
+psycopg2-binary = "*"
+whitenoise = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
