@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic', # new
+    'whitenoise.runserver_nostatic', # new staticdiles ni hostda ochish imkonini beradi
     'django.contrib.staticfiles',
     'myapp',
 ]
