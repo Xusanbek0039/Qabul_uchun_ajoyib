@@ -1,3 +1,4 @@
 from django.contrib import admin
 
-# Register your models here.
+# admin panel hozircha yoq databes ga buyruq ham berilmagan 
+# admin panel uchun 

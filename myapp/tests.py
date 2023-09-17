@@ -1,3 +1,3 @@
 from django.test import TestCase
 
-# Create your tests here.
+# testga extiyoj yoq bolgani uchun yozilmagan 

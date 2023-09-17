@@ -12,3 +12,6 @@ urlpatterns = [
 
     
 ]
+
+
+# bu yerda htmllar ortasida otish uchun maxsus domen manzillar berilgan 

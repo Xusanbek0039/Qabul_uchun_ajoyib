@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 
-# Create your views here.
+# TemplateView bu teplatesni korsat degani name esa htmlga yoldur 
 class HomePageView(TemplateView):
     template_name = 'index.html'
 
