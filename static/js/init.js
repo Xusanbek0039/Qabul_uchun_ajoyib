@@ -1,5 +1,5 @@
 $(".countdown").countdown({
-  date: "30 Movember 2023 00:00:00",
+  date: "30 November 2023 00:00:00",
   format: "on"
 }, function() {
 });
