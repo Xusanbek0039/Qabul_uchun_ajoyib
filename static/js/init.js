@@ -5,4 +5,5 @@ $(".countdown").countdown({
 });
 
 
+
 // Orqaga sanoqni vaqtini shu yerdasn ozgartirasiz
