@@ -18,7 +18,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 
 # Domen kiritib o'tasiz bu yerda
-ALLOWED_HOSTS = ['*','onlineqabul.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # yaratilingan applar hamda foydalanayotgan aplicationlar
@@ -29,9 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic', # new staticfiles ni hostda ochish imkonini beradi
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'myapp',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -69,9 +70,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #  malumotlar bazasi
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASES_URL")
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 
 
@@ -120,3 +123,5 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

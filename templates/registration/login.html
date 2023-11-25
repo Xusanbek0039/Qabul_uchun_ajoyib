@@ -1,4 +1,5 @@
 {% load static %}
+{%block content %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -89,7 +90,7 @@
                             </li>
 
                             <li>
-                                <a href="{% url 'register' %}">Hisob yaratish</a>
+                                <a href="{% url 'signup' %}">Hisob yaratish</a>
                             </li>
 
                             <li>
@@ -171,11 +172,15 @@
 
                                 <div class="row justify-content-center align-items-center">
                                     <div class="col-lg-5 col-12">
-                                        <button type="submit" class="form-control">Kirish</button>
+                                        <form method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Kirish</button>
+</form>
+
                                     </div>
 
                                     <div class="col-lg-5 col-12">
-                                        <a href="{% url 'register' %}" class="btn custom-btn custom-border-btn">Yaratish</a>
+                                        <a href="{% url 'signup' %}" class="btn custom-btn custom-border-btn">Yaratish</a>
                                     </div>
                                 </div>
 
@@ -202,3 +207,4 @@
 
     </body>
 </html>
+{% endblock content %}

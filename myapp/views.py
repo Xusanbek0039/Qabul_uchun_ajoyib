@@ -13,8 +13,8 @@ class ContacView(TemplateView):
     template_name = 'contact.html'
 
 
-class Loginview(TemplateView):
-    template_name = 'login.html'
+# class Loginview(TemplateView):
+#     template_name = 'login.html'
 
 
 class ErrorView(TemplateView):
@@ -25,8 +25,7 @@ class PasresertView(TemplateView):
     template_name = 'password-reset.html'
 
 
-class Registerview(TemplateView):
-    template_name='register.html'
+
 
 class SoatView(TemplateView):
     template_name='soat.html'

@@ -1,4 +1,5 @@
 {% load static %}
+{% block content %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -95,7 +96,7 @@ Bootstrap 5 Form Pack Template
                             </li>
 
                             <li>
-                                <a href="{% url 'register' %}">Hisob yaratish</a>
+                                <a href="{% url 'signup' %}">Hisob yaratish</a>
                             </li>
 
                             <li>
@@ -191,7 +192,11 @@ Bootstrap 5 Form Pack Template
 
                                     <div class="row justify-content-center align-items-center">
                                         <div class="col-lg-5 col-md-5 col-5 ms-auto">
+                                            <form  method = "post">{% csrf_token %} 
+                                            {{ form.as_p }}
                                             <button type="submit" class="form-control">Davom etish</button>
+                                        </form>
+                                            
                                         </div>
 
                                         <div class="col-lg-6 col-md-6 col-7">
@@ -223,3 +228,4 @@ Bootstrap 5 Form Pack Template
 
     </body>
 </html>
+{% endblock content %}
